@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVENT MANTRA</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      background: #f4f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Navbar Logo Round Style */
+    .rounded-logo {
+      border-radius: 50%;                /* Makes image circular */
+      border: 2px solid #f8f9fa;         /* White soft border */
+      box-shadow: 0 0 8px rgba(255,255,255,0.4); /* Glow effect */
+      object-fit: cover;                 /* Keeps proportion */
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+    .rounded-logo:hover {
+      transform: scale(1.05);
+    }
+
+    .navbar-brand span {
+      color: #f8f9fa;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    .navbar-brand:hover span {
+      color: #ffc107;
+      transition: color 0.3s ease;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('wedding1.jpg') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.3rem;
+    }
+
+    /* Services */
+    .services .card {
+      transition: transform 0.3s;
+    }
+    .services .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Gallery */
+    .gallery img {
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Testimonials */
+    .testimonial-section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .testimonial-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #222;
+    }
+    .testimonial-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .testimonial {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .testimonial:hover {
+      transform: translateY(-5px);
+    }
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .testimonial .name {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+    .testimonial .role {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 12px;
+    }
+    .testimonial p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #444;
+    }
+    .stars {
+      margin-top: 10px;
+      color: #f5a623;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer a {
+      color: #f8d210;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header/Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <img src="logo.jpeg" alt="EventsMantra Logo" class="rounded-logo me-2">
+      <span>EventsMantra</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="EEE.HTML">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="ABOUT US.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="SERVICES.HTML">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="GALLERY.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="PACKAGES.HTML">Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="CONTACT US.HTML">Contact Us</a></li>
+        <li class="nav-item"><a class="btn btn-warning ms-2" href="tel:+910000000000">📞 Call Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Plan Your Perfect Event</h1>
+    <p>Unforgettable Weddings • Elegant Parties • Corporate Events</p>
+    <a href="#contact" class="btn btn-lg btn-warning mt-3">Plan Your Event</a>
+  </div>
+</section>
+<!-- Gallery Section -->
+  <section id="gallery" class="gallery container my-5">
+    <h2 class="text-center mb-4">Featured Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-4"><img src="wedding2.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-4"><img src="pexels-vireshstudio-1456669.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-4"><img src="pexels-trungnguyenphotog-2959192.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-4"><img src="pexels-minan1398-752842.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-4"><img src="pexels-ihsanaditya-1146345.jpg" class="img-fluid rounded"></div>
+      <div class="col-md-4"><img src="pexels-quang-nguyen-vinh-222549-2165931.jpg" class="img-fluid rounded"></div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="GALLERY.html" class="btn btn-dark">See Full Gallery</a>
+    </div>
+  </section>
+
+  <!--testimonial section-->
+  <section class="testimonial-section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <img src="Screenshot 1.png" alt="Riya Sharma">
+        <div class="name">Riya Sharma</div>
+        <div class="role">Student Coordinator, TechFest 2025</div>
+        <p>“Event Mantra organized our annual tech fest flawlessly. From registration to execution, everything was smooth and professional.”</p>
+        <div class="stars">★★★★★</div>
+      </div><div class="testimonial">
+    <img src="Screenshot 2.png" alt="Arjun Khatri">
+    <div class="name">Arjun Khatri</div>
+    <div class="role">Sponsor, DevSummit</div>
+    <p>“Timely communication and flawless support. The Event Mantra team delivered beyond expectations and helped us connect with our audience.”</p>
+    <div class="stars">★★★★★</div>
+  </div>
+
+  <div class="testimonial">
+    <img src="Screenshot 4.png" alt="Meera Soni">
+    <div class="name">Meera Soni</div>
+    <div class="role">Guest Speaker</div>
+    <p>“The stage setup and technical support were excellent. I enjoyed speaking and interacting with the audience.”</p>
+    <div class="stars">★★★★☆</div>
+  </div>
+  </section>
+  
+  <!-- Footer -->
+  <!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row text-md-left">
+
+                        <!-- About Us -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Event Mantra</h5>
+        <p>We make your special occasions unforgettable with expert wedding and event planning services.</p>
+      </div>
+
+                        <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Quick Links</h5>
+        <p><a href="EEE.html" class="text-white text-decoration-none">Home</a></p>
+        <p><a href="ABOUT US.html" class="text-white text-decoration-none">About Us</a></p>
+        <p><a href="SERVICES.html" class="text-white text-decoration-none">Services</a></p>
+        <p><a href="GALLERY.HTML" class="text-white text-decoration-none">Gallery</a></p>
+        <p><a href="CONTACT US.HTML" class="text-white text-decoration-none">Contact Us</a></p>
+      </div>
+
+                         <!-- Services -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Our Services</h5>
+        <p><a href="#" class="text-white text-decoration-none">Wedding Planning</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Corporate Events</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Birthday & Anniversary</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Decoration & Catering</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Venue Booking</a></p>
+      </div>
+
+                          <!-- Contact & Social Media -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Contact Us</h5>
+        <p><i class="fas fa-home mr-3"></i> 123 Event Mantra, Gujrat, India</p>
+        <p><i class="fas fa-envelope mr-3"></i> info@eventmantra.com</p>
+        <p><i class="fas fa-phone mr-3"></i> +91 12345 67890</p>
+        <div class="mt-3">
+          <a href="#" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white me-4"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="text-white me-4"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="mb-4">
+
+    <!-- Copyright -->  
+<div class="row">
+  <div class="col-12 text-center">
+    <p>© 2025 Event Mantra. All Rights Reserved.</p>
+  </div>
+</div>
+
+<!-- (Your About, Services, Gallery, Testimonials, Contact, and Footer sections remain the same) -->
+
+<!-- Font Awesome CDN (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
