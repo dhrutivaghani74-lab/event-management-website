@@ -1,0 +1,133 @@
+/* ===== General Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    background: linear-gradient(120deg, #6a11cb, #fc25b4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Container ===== */
+.container {
+    background: #ffffff;
+    width: 380px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ===== Headings ===== */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ===== Form ===== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Inputs & Select ===== */
+input, select {
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 12px;
+    background: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1b5fd3;
+}
+
+/* ===== Links ===== */
+a {
+    text-decoration: none;
+    color: #2575fc;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer text ===== */
+.footer-text {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 12px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h3 {
+    color: #2575fc;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #333;
+    font-weight: 600;
+}
+
+/* ===== Event Cards ===== */
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 80px 30px;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.event-card h3 {
+    color: #2575fc;
