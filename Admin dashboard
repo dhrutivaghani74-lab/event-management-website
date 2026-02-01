@@ -1,0 +1,22 @@
+function addEvent() {
+    let eventName = document.getElementById("eventName").value;
+    let eventDate = document.getElementById("eventDate").value;
+    let eventLocation = document.getElementById("eventLocation").value;
+
+    if (eventName === "" || eventDate === "" || eventLocation === "") {
+        alert("Please fill all event details!");
+        return;
+    }
+
+    let events = JSON.parse(localStorage.getItem("events")) || [];
+
+    events.push({
+        name: eventName,
+        date: eventDate,
+        location: eventLocation
+    });
+
+    localStorage.setItem("events", JSON.stringify(events));
+    alert("Event Added Successfully!");
+    displayEvents();
+}
