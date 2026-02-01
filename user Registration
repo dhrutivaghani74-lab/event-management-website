@@ -1,0 +1,21 @@
+function registerUser() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (name === "" || email === "" || username === "" || password === "") {
+        alert("All fields are required!");
+        return;
+    }
+    let user = {
+        name: name,
+        email: email,
+        username: username,
+        password: password
+    };
+
+    localStorage.setItem("eventUser", JSON.stringify(user));
+    alert("Registration Successful!");
+    window.location.href = "login.html";
+}

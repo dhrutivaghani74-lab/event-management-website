@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Management | Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-box {
+            background: white;
+            padding: 25px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1a5ed8;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            text-decoration: none;
+            color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-box">
+    <h2>Register Account</h2>
+    <form>
+        <input type="text" placeholder="Dhruti vaghani" required>
+        <input type="email" placeholder="dhrutivaghani34@gmail.com" required>
+        <input type="text" placeholder="Dhruti@76" required>
+        <input type="password" placeholder="Admin@42" required>
+        <input type="password" placeholder="Admin@42" required>
+
+        <select required>
+            <option value="">Select Role</option>
+            <option>User</option>
+            <option>Admin</option>
+        </select>
+
+        <button type="submit">Register</button>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
